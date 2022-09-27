@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Realing</title>
+
+    <style>
+.fade-in {
+  animation: fadeIn ease 10s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.revealing {
+  animation: revealingAnimation ease 10s;
+}
+@keyframes revealingAnimation{
+  0% {
+    mask: linear-gradient(90deg, #000 25%, #000000e6 50%, #00000000) 150% 0 / 400% no-repeat;
+    opacity: .2;
+  }
+  100% {
+    mask: linear-gradient(90deg, #000 25%, #000000e6 50%, #00000000) 0 / 400% no-repeat;
+    opacity: 1;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <div class="fade-in">
+                <img src="https://pbs.twimg.com/profile_images/1179748933612064768/a38_vxNt_400x400.jpg">
+             </div>
+        </div>
+        <div>
+          <div class="revealing">
+            <img src="https://pbs.twimg.com/profile_images/1179748933612064768/a38_vxNt_400x400.jpg">
+         </div>
+        </div>
+    </div>
+</body>
+</html>
